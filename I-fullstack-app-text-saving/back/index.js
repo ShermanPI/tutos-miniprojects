@@ -7,12 +7,31 @@ const methodTypes = Object.freeze({
 })
 
 const server = createServer(async (req, res)=>{
-    console.log(req.url) // prints out the path od the url
-    req.method == methodTypes.get ?
-            res.end(await fs.readFile('reqs.txt'))
-        :
-            await fs.appendFile('reqs.txt', `${req}\n`)
-            return res.end('the text was saved in the file')
+    if(req.method == methodTypes.get){
+        res.setHeader('Content-Type', 'text/plain')
+        res.write(await fs.readFile('reqs.txt'))
+        res.end()
+        return
+    }
+    
+    if(req.method == methodTypes.post){
+        let body = [];
+        req
+        .on('data', (chunk) => {
+          body.push(chunk);
+        })
+        .on('end', async () => {
+            body = Buffer.concat(body).toString();
+            await fs.appendFile('reqs.txt', `${body}\n`)
+            res.end('the text was saved in the file')
+        });
+        
+        return
+    }
+
+    console.log(`request: ${req.method} '${req.url}' by ${req.socket.remoteAddress}`)
+
+
 })
 
 const host = 'localhost',
