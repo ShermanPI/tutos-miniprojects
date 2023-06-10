@@ -6,7 +6,7 @@ const root = ReactDOM.createRoot(appDOMElement)
 
 const createReactElement = React.createElement // function
 
-const btn1 = createReactElement('button', {'data-id': 123}, 'Button 1'),
+const btn1 = createReactElement('button', {'data-id': 123, class: 'azul'}, 'Button 1'),
     btn2 = createReactElement('button', {'data-id': 456}, 'Button 2'),
     btn3 = createReactElement('button', {'data-id': 789}, 'Button 3')
 
