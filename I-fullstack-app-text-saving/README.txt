@@ -1,1 +1,1 @@
-In this mini project im trying to learn abour nodejs, npm and module bundlers
+In this mini project im learning about nodejs, npm and module bundlers like vite

@@ -10,8 +10,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "vite": "^4.3.9"
-  }
+  "type": "module"
 }

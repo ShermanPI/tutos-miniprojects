@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #30303a;    
+}
+
+button{
+    background-color: #E2C044;
+    border: none;
+    padding: 1rem 2rem;
+    margin-inline: 1rem;
+    cursor: pointer;
+}

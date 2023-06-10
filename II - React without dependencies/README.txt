@@ -1,0 +1,1 @@
+Here im trying learn the basics o freact without dependencies
