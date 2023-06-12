@@ -1,0 +1,62 @@
+.yt-thumbnailsGridContainer{
+    display: grid;
+    padding: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.yt-thumnailCard{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.yt-thumbnailImgContainer{
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.yt-thumbnailImgContainer img{
+    position: absolute;
+}
+
+.yt-videoDuration{
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    background-color: #0000009f;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    padding: 0.3rem;
+    right: 4px;
+    bottom: 4px;
+}
+
+.yt-thumbnailInfoContainer{
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.yt-thumbnailProfilePicture{
+    width: 36px;
+    height: 36px;
+    border-radius: 500px;
+    overflow: hidden;
+}
+
+.yt-videoName{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.yt-videoStats{
+    line-height: 1.6;
+    color: #cccccc;
+    font-size: 1.4rem;
+}
