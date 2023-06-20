@@ -1,5 +1,3 @@
-import './app.css';
-
 function timeAgo(time) {
     switch (typeof time) {
         case 'number':
