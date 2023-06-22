@@ -1,0 +1,33 @@
+:root{
+    --title-gap: 4rem;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: var(--title-gap);
+    margin-top: calc(-1 * ((var(--title-gap)) * 2));
+
+}
+
+.game-grid{
+    display: grid;
+    gap: 0.4rem;
+    grid-template: repeat(3, 60px) / repeat(3, 60px);
+    background-color: #fff;
+    color: #000;
+    font-size: 3rem;
+}
+
+.square{
+    background-color: #171a21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    cursor: pointer;
+}
