@@ -10,8 +10,6 @@
     justify-content: center;
     min-height: 100vh;
     gap: var(--title-gap);
-    margin-top: calc(-1 * ((var(--title-gap)) * 2));
-
 }
 
 .game-grid{
@@ -30,4 +28,45 @@
     justify-content: center;
     color: red;
     cursor: pointer;
+}
+
+.turns{
+    display: flex;
+    gap: 2rem;
+}
+
+.turns > span{
+    border-radius: 2rem;
+    font-size: 6rem;
+    padding: 2rem;
+}
+
+.turns > span.selected{
+    background-color: #3a3a3ac0;
+}
+
+.glow-☀️{
+    animation: glow-sun 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-sun {
+    from {
+        text-shadow: 0 0 3px #fffffaa3, 0 0 6px #ffee0052;
+    }
+    to {
+        text-shadow: 0 0 9px #ffee0078, 0 0 12px #ffee00b5;
+    }
+}
+
+.glow-🌑{
+    animation: glow-moon 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-moon {
+    from {
+        text-shadow: 0 0 3px #ffffff5b, 0 0 6px #ffffff79;
+    }
+    to {
+        text-shadow: 0 0 9px #ffffff9b, 0 0 12px #ffffffaf;
+    }
 }
