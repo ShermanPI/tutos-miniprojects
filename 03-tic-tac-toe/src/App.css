@@ -70,3 +70,17 @@
         text-shadow: 0 0 9px #ffffff9b, 0 0 12px #ffffffaf;
     }
 }
+
+button{
+    background-color: transparent;
+    border: 2px #fff solid;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #f0f0f018;
+}
