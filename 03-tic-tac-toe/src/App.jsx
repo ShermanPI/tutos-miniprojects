@@ -1,5 +1,5 @@
 import Board from './components/Board'
-import './App.css'
+import './static/App.css'
 
 export default function App(){
   return (

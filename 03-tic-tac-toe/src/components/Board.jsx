@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { TURNS } from '../constants'
 import { Square } from './Square'
+import WinnerModal from './Winner-modal'
 
 export default function Board(){
   const [turn, setTurn] = useState(TURNS.X)
   const [board, setBoard] = useState(Array(9).fill(null))
+  const [winner, setWinner] = useState(null)
   
   function updateBoard(index){
     if(board[index]) return;
@@ -18,10 +20,12 @@ export default function Board(){
   const restartBoard = ()=>{
     setTurn(TURNS.X)
     setBoard(Array(9).fill(null))
+    setWinner(null)
   }
 
   return(
-    <div className='game-container'>      
+    <div className='game-container'>
+
         <h1>TIC TAC TOE</h1>
         <div className="game-grid" >
           {
