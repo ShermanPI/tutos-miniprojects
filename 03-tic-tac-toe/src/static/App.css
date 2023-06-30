@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: red;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -85,7 +85,7 @@ button:hover{
     background-color: #f0f0f018;
 }
 
-.winner-modal{
+.winner-modal-container{
     position: fixed;
     width: 100%;
     height: 100vh;
