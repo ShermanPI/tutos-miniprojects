@@ -1,4 +1,4 @@
-export const globalVariables ={
-    right: 'right',
-    left: 'left'
+export const globalVariables = {
+  right: 'right',
+  left: 'left'
 }
