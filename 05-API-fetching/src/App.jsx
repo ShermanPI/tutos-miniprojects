@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import '../stylee.css'
+import '../style.css'
 
 export default function App () {
   const [fact, setFact] = useState('Lorem Ipsum')
