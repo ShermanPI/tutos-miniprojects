@@ -5,3 +5,5 @@
 - Users must be able to click the numbers to remove them from the list.
 
 - The application must be responsive and work correctly on all devices.
+
+- Can go to a previous state and a forward state
