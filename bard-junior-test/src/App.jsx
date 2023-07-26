@@ -12,7 +12,7 @@ export default function App(){
   useEffect(()=>{
     const intervalFunction = ()=>{
       const newList = [...numberList]
-      setNumberList(newList.map(el=> el === null ? null  : getRandomNumber()))
+      setNumberList(newList.map(el=> el === null ? null : getRandomNumber()))
     }
 
     const intervalId = setInterval(intervalFunction,3000)
@@ -29,6 +29,7 @@ export default function App(){
 
   return (
     <main>
+    <h1>Click a Number!</h1>
       <ul className="list-container">
         {
           numberList.map((el, index) => {
