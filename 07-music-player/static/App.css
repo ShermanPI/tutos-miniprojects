@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+}
+
+.music-player{
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+}
+
+.control-panel{
+    display: flex;
+    gap: 1rem;
+}
+
+.control-panel > button{
+    width: 100%;
+    line-height: 3rem;
+}
