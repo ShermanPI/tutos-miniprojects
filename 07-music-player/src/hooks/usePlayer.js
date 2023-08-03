@@ -20,10 +20,12 @@ export const usePlayer = ({ initialMusicId }) => {
     if (newId <= maxId) {
       audioRef.current.src = dummyMusic[newId].url
       audioRef.current.play()
+      setIsPlaying(true)
       setMusicId(newId)
     } else {
       audioRef.current.src = dummyMusic[0].url
       audioRef.current.play()
+      setIsPlaying(true)
       setMusicId(0)
     }
   }
@@ -33,10 +35,12 @@ export const usePlayer = ({ initialMusicId }) => {
     if (newId < 0) {
       audioRef.current.src = dummyMusic[maxId].url
       audioRef.current.play()
+      setIsPlaying(true)
       setMusicId(maxId)
     } else {
       audioRef.current.src = dummyMusic[newId].url
       audioRef.current.play()
+      setIsPlaying(true)
       setMusicId(newId)
     }
   }
