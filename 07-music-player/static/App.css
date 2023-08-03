@@ -15,7 +15,8 @@ body{
 .music-player{
     display: flex;
     flex-direction: column;
-    max-width: 250px;
+    width: 100%;
+    background-color: red;
 }
 
 .control-panel{

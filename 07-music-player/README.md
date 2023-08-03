@@ -14,7 +14,7 @@ Project that allows you to learn how to use useState, useEffect, and custom hook
 
 - Can show the album cover ✅
 
-- can set volume in the music
+- can set volume in the music ✅
 
 - Side effects can be used to load the song list, play the current song, and update the playback position when the slider is moved.
 

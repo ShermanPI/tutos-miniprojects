@@ -3,9 +3,8 @@ import { usePlayer } from '../hooks/usePlayer'
 import { ControlBtn } from './ControlButton'
 
 export const MusicPlayer = () => {
-  const { music, isPlaying, isReplaying, playPreviousSong, playNextSong, playSongHandler, replayHandler } = usePlayer({ initialMusicId: 0 })
+  const { music, isPlaying, isReplaying, volumeHandler, playPreviousSong, playNextSong, playSongHandler, replayHandler } = usePlayer({ initialMusicId: 0 })
   const artists = music.artists
-
   return (
     <section className='music-player'>
       <h1>Music Player</h1>
@@ -17,7 +16,7 @@ export const MusicPlayer = () => {
         </section>
         : null}
 
-      <input type='range' min='0' max='100' step='5' defaultValue='20' />
+      <input type='range' min='0' max='100' step='5' defaultValue='20' onInput={volumeHandler} />
 
       <section className='control-panel'>
         <ControlBtn buttonContent='⏮️' handleClick={playPreviousSong} />
