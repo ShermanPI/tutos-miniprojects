@@ -10,7 +10,8 @@ export const MusicPlayer = () => {
     <section className='music-player'>
       <h1>Music Player</h1>
       {music
-        ? <section>
+        ? <section className='album-cover'>
+          <img src={music.albumImg} alt={`${music.name} album cover`} />
           <p className='artist-names'>{artists.length > 1 ? artists.map((el, i) => i === (artists.length - 1) ? el : `${el}, `) : artists}</p>
           <p className='music-name'>{music.name}</p>
         </section>

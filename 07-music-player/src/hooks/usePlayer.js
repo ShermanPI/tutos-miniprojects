@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react'
 
 const dummyMusic = [
-  { id: 'M-1111', name: 'Progreso', artists: ['Eladio Carrion'], url: '../../static/music/Progreso.mp3', musicImg: undefined },
-  { id: 'M-2222', name: 'Coco Chanel', artists: ['Eladio Carrion', 'Bad Bunny'], url: '../../static/music/Coco Chanel.mp3', musicImg: undefined },
-  { id: 'M-3333', name: '3 Am', artists: ['Eladio Carrion'], url: '../../static/music/3 Am.mp3', musicImg: undefined },
-  { id: 'M-4444', name: 'Kemba Walker', artists: ['Eladio Carrion', 'Bad Bunny', 'Shermanius'], url: '../../static/music/Kemba Walker.mp3', musicImg: undefined }
+  { id: 'M-1111', albumImg: '../static/img/monarca.jpg', name: 'Progreso', artists: ['Eladio Carrion'], url: '../../static/music/Progreso.mp3', musicImg: undefined },
+  { id: 'M-2222', albumImg: '../static/img/3MEN2 KBRN.png', name: 'Coco Chanel', artists: ['Eladio Carrion', 'Bad Bunny'], url: '../../static/music/Coco Chanel.mp3', musicImg: undefined },
+  { id: 'M-3333', albumImg: '../static/img/Sauce Boyz.jpg', name: '3 Am', artists: ['Eladio Carrion'], url: '../../static/music/3 Am.mp3', musicImg: undefined },
+  { id: 'M-4444', albumImg: '../static/img/Sauce Boyz.jpg', name: 'Kemba Walker', artists: ['Eladio Carrion', 'Bad Bunny', 'Shermanius'], url: '../../static/music/Kemba Walker.mp3', musicImg: undefined }
 ]
 
 const maxId = (dummyMusic.length - 1)

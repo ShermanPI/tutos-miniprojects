@@ -12,7 +12,7 @@ Project that allows you to learn how to use useState, useEffect, and custom hook
 
 - if the replay btn is activated play it again ✅
 
-- Can show the album cover
+- Can show the album cover ✅
 
 - can set volume in the music
 
