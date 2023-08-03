@@ -10,7 +10,7 @@ Project that allows you to learn how to use useState, useEffect, and custom hook
 
 - When a song ends play the next one ✅
 
-- if the replay btn is activated play it again 
+- if the replay btn is activated play it again ✅
 
 - Can show the album cover
 

@@ -12,8 +12,8 @@ const maxId = (dummyMusic.length - 1)
 export const usePlayer = ({ initialMusicId }) => {
   const [musicId, setMusicId] = useState(initialMusicId)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isReplaying, setReplay] = useState(false)
   const audioRef = useRef(new window.Audio(dummyMusic[musicId].url))
-  
 
   const music = dummyMusic[musicId]
 
@@ -57,18 +57,34 @@ export const usePlayer = ({ initialMusicId }) => {
     }
   }
 
-  useEffect(()=>{
-    audioRef.current.addEventListener('ended',()=>{
-      playNextSong()
-    })
+  const replayHandler = () =>{
+    setReplay(!isReplaying)
+  }
 
-  }, [])
+  useEffect(()=>{
+    const autoReplay = () => {
+      if(isReplaying){
+        audioRef.current.currentTime = 0
+        audioRef.current.play()
+      }else{
+        playNextSong()
+      }
+    }
+
+    audioRef.current.addEventListener('ended', autoReplay)
+
+    return ()=> {
+      audioRef.current.removeEventListener('ended', autoReplay)
+    }
+  }, [isReplaying])
 
   return {
     music,
     isPlaying,
+    isReplaying,
     playNextSong,
     playPreviousSong,
-    playSongHandler
+    playSongHandler,
+    replayHandler
   }
 }

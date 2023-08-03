@@ -3,7 +3,7 @@ import { usePlayer } from '../hooks/usePlayer'
 import { ControlBtn } from './ControlButton'
 
 export const MusicPlayer = () => {
-  const { music, isPlaying, playPreviousSong, playNextSong, playSongHandler } = usePlayer({ initialMusicId: 0 })
+  const { music, isPlaying, isReplaying, playPreviousSong, playNextSong, playSongHandler, replayHandler } = usePlayer({ initialMusicId: 0 })
   const artists = music.artists
 
   return (
@@ -22,7 +22,7 @@ export const MusicPlayer = () => {
         <ControlBtn buttonContent='⏮️' handleClick={playPreviousSong} />
         <ControlBtn buttonContent={isPlaying ? '⏸️' : '▶️'} handleClick={playSongHandler} />
         <ControlBtn buttonContent='⏭️' handleClick={playNextSong} />
-        <ControlBtn buttonContent='🔁' />
+        <ControlBtn buttonContent={isReplaying ? '🔥': '🔁'} handleClick={replayHandler}/>
       </section>
     </section>
   )
