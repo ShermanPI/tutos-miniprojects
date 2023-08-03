@@ -78,6 +78,10 @@ export const usePlayer = ({ initialMusicId }) => {
     }
   }, [isReplaying])
 
+  useEffect(()=>{
+    audioRef.current.volume = 0.2
+  }, [])
+
   const volumeHandler = (e) => {
     // console.log(this)
     // console.log(e.target.value)
