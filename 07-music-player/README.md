@@ -8,7 +8,7 @@ Project that allows you to learn how to use useState, useEffect, and custom hook
 
 - The state can be managed with useState to store the current song, playback position ✅
 
-- When a song ends play the next one
+- When a song ends play the next one ✅
 
 - if the replay btn is activated play it again 
 
