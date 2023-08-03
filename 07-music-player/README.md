@@ -6,9 +6,11 @@ Project that allows you to learn how to use useState, useEffect, and custom hook
 
 - With controls to play, pause, forward, and rewind songs. ✅ 
 
-- The state can be managed with useState to store the current song, playback position
+- The state can be managed with useState to store the current song, playback position ✅
 
-- When a song ends play the next one if the replay btn is not activated
+- When a song ends play the next one
+
+- if the replay btn is activated play it again 
 
 - Can show the album cover
 

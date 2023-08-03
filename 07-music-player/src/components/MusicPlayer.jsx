@@ -1,11 +1,10 @@
 /* eslint-disable react/jsx-closing-tag-location */
-import { usePlayer } from '../hooks/usePLayer'
+import { usePlayer } from '../hooks/usePlayer'
 import { ControlBtn } from './ControlButton'
 
 export const MusicPlayer = () => {
   const { music, isPlaying, playPreviousSong, playNextSong, playSongHandler } = usePlayer({ initialMusicId: 0 })
   const artists = music.artists
-  console.log(music)
 
   return (
     <section className='music-player'>

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 const dummyMusic = [
   { id: 'M-1111', name: 'Progreso', artists: ['Eladio Carrion'], url: '../../static/music/Progreso.mp3', musicImg: undefined },
@@ -13,6 +13,8 @@ export const usePlayer = ({ initialMusicId }) => {
   const [musicId, setMusicId] = useState(initialMusicId)
   const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef(new window.Audio(dummyMusic[musicId].url))
+  
+
   const music = dummyMusic[musicId]
 
   const playNextSong = () => {
@@ -54,6 +56,13 @@ export const usePlayer = ({ initialMusicId }) => {
       setIsPlaying(false)
     }
   }
+
+  useEffect(()=>{
+    audioRef.current.addEventListener('ended',()=>{
+      playNextSong()
+    })
+
+  }, [])
 
   return {
     music,
