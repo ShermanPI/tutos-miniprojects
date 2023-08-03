@@ -1,20 +1,20 @@
+/* eslint-disable react/jsx-closing-tag-location */
 import { usePlayer } from '../hooks/usePLayer'
 import { ControlBtn } from './ControlButton'
 
 export const MusicPlayer = () => {
   const { music, isPlaying, playPreviousSong, playNextSong, playSongHandler } = usePlayer({ initialMusicId: 0 })
   const artists = music.artists
+  console.log(music)
 
   return (
     <section className='music-player'>
       <h1>Music Player</h1>
       {music
-        ? 
-        <>
-          <audio src={music.url} id='audio-tag' preload='auto'/>
+        ? <section>
           <p className='artist-names'>{artists.length > 1 ? artists.map((el, i) => i === (artists.length - 1) ? el : `${el}, `) : artists}</p>
           <p className='music-name'>{music.name}</p>
-        </>
+        </section>
         : null}
 
       <input type='range' min='0' max='100' step='5' defaultValue='20' />
