@@ -19,12 +19,12 @@ export const MusicPlayer = () => {
         : null}
 
       <input type='range' min='0' max='100' step='5' defaultValue='20' onInput={volumeHandler} />
-
       <section className='control-panel'>
+        <ControlBtn buttonContent='⏮️' handleClick={playPreviousSong} />
         <ControlBtn buttonContent='⏮️' handleClick={playPreviousSong} />
         <ControlBtn buttonContent={isPlaying ? '⏸️' : '▶️'} handleClick={playSongHandler} />
         <ControlBtn buttonContent='⏭️' handleClick={playNextSong} />
-        <ControlBtn buttonContent={isReplaying ? '🔥': '🔁'} handleClick={replayHandler}/>
+        <ControlBtn buttonContent={isReplaying ? '🔥' : '🔁'} handleClick={replayHandler} />
       </section>
     </section>
   )

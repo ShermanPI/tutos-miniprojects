@@ -7,7 +7,6 @@ const dummyMusic = [
   { id: 'M-4444', albumImg: '../static/img/Sauce Boyz.jpg', name: 'Kemba Walker', artists: ['Eladio Carrion', 'Bad Bunny', 'Shermanius'], url: '../../static/music/Kemba Walker.mp3' }
 ]
 
-
 export const usePlayer = ({ initialMusicId }) => {
   const [musicId, setMusicId] = useState(initialMusicId)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -57,28 +56,28 @@ export const usePlayer = ({ initialMusicId }) => {
     }
   }
 
-  const replayHandler = () =>{
+  const replayHandler = () => {
     setReplay(!isReplaying)
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     const autoReplay = () => {
-      if(isReplaying){
+      if (isReplaying) {
         audioRef.current.currentTime = 0
         audioRef.current.play()
-      }else{
+      } else {
         playNextSong()
       }
     }
 
     audioRef.current.addEventListener('ended', autoReplay)
 
-    return ()=> {
+    return () => {
       audioRef.current.removeEventListener('ended', autoReplay)
     }
   }, [isReplaying])
 
-  useEffect(()=>{
+  useEffect(() => {
     audioRef.current.volume = 0.2
   }, [])
 

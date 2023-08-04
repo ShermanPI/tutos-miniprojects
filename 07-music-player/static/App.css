@@ -16,36 +16,37 @@ html {
 body{
     font-size: 2rem;
     color: var(--font-color);
-    overflow: hidden;
 }
 
 .music-player{
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    overflow: hidden;
     width: 100%;
+    height: 100vh;
+    margin-inline: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10%;
     background-color: var(--background-theme);
 }
 
 .control-panel{
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
 }
 
 .control-panel > button{
-    width: 100%;
     line-height: 3rem;
 }
 
 .music-container{
+    width: 100%;
     display: flex;
-    width: 75%;
     flex-direction: column;
     margin-inline: auto;
 }
 
-.music-container .album-cover{
-    width: 100%;
+.album-cover{
     margin-block: 4rem;
     position: relative;
     display: flex;
